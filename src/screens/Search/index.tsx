@@ -1,17 +1,16 @@
 import { useEffect, useState } from 'react'
-import { ImageBackground, Text, View, ScrollView } from 'react-native'
+import { ImageBackground, ScrollView, Text, View } from 'react-native'
 
-import { styles } from './styles'
-import Logo from '@/assets/logo.svg'
 import bg from '@/assets/background.png'
-
+import Logo from '@/assets/logo.svg'
+import { SelectList } from '@/components/SelectList'
 import { useCity } from '@/hooks/useCity'
 import {
   CityProps,
   getCityByNameService,
 } from '@/services/getCityByNameService'
 
-import { SelectList } from '@/components/SelectList'
+import { styles } from './styles'
 
 export function Search() {
   const [search, setSearch] = useState('')

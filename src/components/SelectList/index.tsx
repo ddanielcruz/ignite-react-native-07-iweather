@@ -1,8 +1,9 @@
 import { Text, TouchableOpacity, View } from 'react-native'
 
-import { styles } from './styles'
 import { Input } from '@/components/Input'
 import { CityProps } from '@/services/getCityByNameService'
+
+import { styles } from './styles'
 
 type Props = {
   isLoading?: boolean

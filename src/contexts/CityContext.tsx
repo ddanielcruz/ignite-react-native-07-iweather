@@ -1,11 +1,10 @@
-import { ReactNode, createContext, useEffect, useState } from 'react'
+import { createContext, ReactNode, useEffect, useState } from 'react'
 
-import { CityProps } from '@/services/getCityByNameService'
 import {
   getStorageCity,
-  removeStorageCity,
   saveStorageCity,
 } from '@/libs/asyncStorage/cityStorage'
+import { CityProps } from '@/services/getCityByNameService'
 
 type CityContextProviderProps = {
   children: ReactNode

@@ -1,23 +1,22 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import { ScrollView, View } from 'react-native'
 
-import { styles } from './styles'
-
+import { Loading } from '@/components/Loading'
+import { NextDays } from '@/components/NextDays'
+import { SelectList } from '@/components/SelectList'
+import { WeatherDetails } from '@/components/WeatherDetails'
+import { WeatherToday } from '@/components/WeatherToday'
 import { useCity } from '@/hooks/useCity'
 import {
   CityProps,
   getCityByNameService,
 } from '@/services/getCityByNameService'
 import {
-  WeatherResponseProps,
   getWeatherByCityService,
+  WeatherResponseProps,
 } from '@/services/getWeatherByCityService'
 
-import { Loading } from '@/components/Loading'
-import { NextDays } from '@/components/NextDays'
-import { SelectList } from '@/components/SelectList'
-import { WeatherToday } from '@/components/WeatherToday'
-import { WeatherDetails } from '@/components/WeatherDetails'
+import { styles } from './styles'
 
 export function Dashboard() {
   const [search, setSearch] = useState('')
@@ -36,7 +35,7 @@ export function Dashboard() {
     setCities([])
   }
 
-  async function getWeatherDetails() {
+  const getWeatherDetails = useCallback(async () => {
     if (!city) {
       return
     }
@@ -48,7 +47,7 @@ export function Dashboard() {
 
     setWeather(response)
     setWeatherIsLoading(false)
-  }
+  }, [city])
 
   async function getCities(city: string) {
     setIsSearching(true)
@@ -72,7 +71,7 @@ export function Dashboard() {
 
   useEffect(() => {
     getWeatherDetails()
-  }, [city])
+  }, [getWeatherDetails])
 
   if (isWeatherLoading || cityIsLoading || !city) {
     return <Loading />

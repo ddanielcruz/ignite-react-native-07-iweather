@@ -1,10 +1,10 @@
-import { ImageBackground, Text, View } from 'react-native'
 import dayjs from 'dayjs'
-
-import { styles } from './styles'
+import { ImageBackground, Text, View } from 'react-native'
+import { weatherIcons } from 'src/utils/weatherIcons'
 
 import { isDayTime } from '@/utils/isDayTime'
-import { weatherIcons } from 'src/utils/weatherIcons'
+
+import { styles } from './styles'
 
 export type WeatherTodayProps = {
   temp: string

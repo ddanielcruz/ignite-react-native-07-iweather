@@ -1,11 +1,10 @@
 import { View } from 'react-native'
 
-import sun from '@/assets/sun.svg'
-import rain from '@/assets/rain.svg'
-import wind from '@/assets/wind.svg'
 import drop from '@/assets/drop.svg'
+import rain from '@/assets/rain.svg'
+import sun from '@/assets/sun.svg'
 import thermometer from '@/assets/thermometer.svg'
-
+import wind from '@/assets/wind.svg'
 import { WeatherItem } from '@/components/WeatherItem'
 
 import { styles } from './styles'

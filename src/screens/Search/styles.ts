@@ -1,5 +1,6 @@
-import { theme } from '@/styles/theme'
 import { Dimensions, StyleSheet } from 'react-native'
+
+import { theme } from '@/styles/theme'
 
 const dimensions = Dimensions.get('window')
 

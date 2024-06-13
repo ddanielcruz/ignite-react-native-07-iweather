@@ -1,7 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
-import { Search } from '@/screens/Search'
 import { Dashboard } from '@/screens/Dashboard'
+import { Search } from '@/screens/Search'
 
 const { Navigator, Screen } = createNativeStackNavigator()
 
