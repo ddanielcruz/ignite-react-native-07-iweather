@@ -34,6 +34,8 @@ export async function getCityByNameService(
 
     return [city]
   } catch (error) {
+    console.error(error)
+
     return []
   }
 }

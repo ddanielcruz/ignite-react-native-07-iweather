@@ -1,0 +1,11 @@
+{
+  "id": "1",
+  "name": "Passo Fundo",
+  "sys": {
+    "country": "BR"
+  },
+  "coord": {
+    "lon": 100,
+    "lat": 200
+  }
+}
